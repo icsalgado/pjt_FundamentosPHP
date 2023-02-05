@@ -27,13 +27,17 @@
           </tr>
         </thead>
         <tbody>
-          <?php foreach(courses() as $curso) : ?>
+          
+            <!-- Para cada chamada da função getCourses, vai inserir cada curso na variavel $curso
+            A sintaxe do foreach() : ?> ... endforeach; ?> é usada em arquivos de exibição
+           -->
+          <?php foreach(getCourses() as $curso) : ?>
             <?php if (!$curso["status"]){
               continue;
-            } ?>
+            } ?> <!-- para ignorar se o status for false -->
             <tr>
-              <th scope="row"><?= $curso["nome_curso"] ?></th>
-              <td><?= time_format($curso["carga_horaria"]) ?></td>
+              <th scope="row"><?= $curso["nome_curso"] ?></th> <!-- short tag do php -->
+              <td><?= time_format($curso["carga_horaria"]) ?></td> 
               <td><?= $curso["versao"] ?></td>
             </tr>
           <?php endforeach; ?>

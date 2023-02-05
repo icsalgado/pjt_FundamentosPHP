@@ -1,5 +1,5 @@
 <?php
 
-require_once "assets/timeFormat.php";
-require_once "data/courses.php";
-require_once "views/main.php";
+require_once "assets/timeFormat.php"; //importa a formação da carga horária
+require_once "data/courses.php"; //importa os cursos
+require_once "views/main.php";  //inclui o arquivo do frontend

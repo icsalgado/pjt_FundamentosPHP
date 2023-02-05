@@ -1,7 +1,11 @@
 <?php
 
-function courses(){
-    return[
+/**
+ * Retorna um array de objetos 
+ */
+
+function getCourses(){
+    return[ 
         "PHP" => [
             "nome_curso" => "PHPfundamentos", 
             "versao" => 7.4, 
